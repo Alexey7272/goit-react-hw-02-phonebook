@@ -1,0 +1,44 @@
+.AddContact {
+    width: 500px;
+    height: 110px;
+
+    margin: 40px;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.AddContact__label {
+    font-size: larger;
+    font-weight: 500;
+}
+
+.AddContact__name {
+    display: block;
+    resize: none;
+
+    width: 200px;
+    height: 20px;
+
+    margin-top: 5px;
+    margin-bottom: 40px;
+}
+
+.AddContact__button {
+    background: white;
+    border: 1px solid slategray;
+    border-radius: 4px;
+    cursor: pointer;
+
+    width: 130px;
+    height: 25px;
+}
+
+.Contacts__title {
+    padding-top: 30px;
+}    
+
+.Contacts__list {
+    font-size: large;
+
+    padding-top: 20px;
+}
