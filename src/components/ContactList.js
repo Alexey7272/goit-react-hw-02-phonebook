@@ -1,12 +1,13 @@
 // import React, {Component} from "react";
+import styles from "./PhoneBook.module.css";
 
 const ContactList = ({ contacts }) => (
-   <ul>
+    <ul className={styles.Contacts__list}>
         {contacts.map(( contact ) => ( 
             <li
-            key={contact.name}
+            key={contact.id}
             >
-            {contact.name} 
+            {contact.text}
             </li>
         ))}
     </ul>

@@ -12,15 +12,15 @@ export default class App extends Component {
   };
 
   addContact = text => {
-    console.log(text)
-
+    // console.log(text)
+    
     const contact = {
       id: shortid.generate(),
       text,
     };
 
     this.setState(prevState => ({
-      name: [contact, ...this.state.name],
+      contacts: [contact, ...prevState.contacts],
     }));
   };
 
@@ -29,7 +29,7 @@ export default class App extends Component {
       <div>
         <ContactEditor onSubmit={this.addContact}/>
         <h2 className={styles.Contacts__title}>Contacts</h2>
-        <ContactList contacts={this.state}/>
+        <ContactList contacts={this.state.contacts}/>
       </div>
     )
   }

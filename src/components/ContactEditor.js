@@ -18,26 +18,25 @@ class ContactEditor extends Component {
         this.setState({nameText: ''});
     };
 
-   render() {
-    return (
-        <form className={styles.AddContact} onSubmit={this.formSubmit}> 
+    render() {
+        return (
+            <form className={styles.AddContact} onSubmit={this.formSubmit}> 
   
-            <label className={styles.AddContact__label}>
-              Name
-              <textarea 
-              value={this.state.nameText} 
-              onChange={this.nameChange}  
-              className={styles.AddContact__name}
-              >
-          
-              </textarea>
-            </label>
+                <label className={styles.AddContact__label}>
+                   Name
+                    <textarea 
+                       value={this.state.nameText} 
+                       onChange={this.nameChange}  
+                       className={styles.AddContact__name}
+                    >
+                    </textarea>
+                </label>
 
-            <button type="submit" className={styles.AddContact__button}>Add contact</button>
+                <button type="submit" className={styles.AddContact__button}>Add contact</button>
 
-        </form>
-    )
-   };
+            </form>
+        )
+    };
 }
 
 export default ContactEditor;

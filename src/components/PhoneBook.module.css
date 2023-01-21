@@ -34,11 +34,11 @@
 }
 
 .Contacts__title {
-    padding-top: 30px;
+    padding-left: 40px;
 }    
 
 .Contacts__list {
     font-size: large;
 
-    padding-top: 20px;
+    margin-left: 30px;
 }
