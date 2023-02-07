@@ -8,12 +8,13 @@ export default class App extends Component {
 
   state = {
     contacts: [],
-    name: ''
+    name: '',
+    number: '',
   };
 
   addContact = text => {
-    // console.log(text)
-    
+    console.log(text)
+
     const contact = {
       id: shortid.generate(),
       text,
@@ -32,5 +33,5 @@ export default class App extends Component {
         <ContactList contacts={this.state.contacts}/>
       </div>
     )
-  }
+  };
 };

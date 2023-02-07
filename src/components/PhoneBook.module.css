@@ -1,6 +1,6 @@
 .AddContact {
     width: 500px;
-    height: 110px;
+    height: 190px;
 
     margin: 40px;
     padding: 20px;
@@ -12,7 +12,7 @@
     font-weight: 500;
 }
 
-.AddContact__name {
+.AddContact__data {
     display: block;
     resize: none;
 
@@ -20,9 +20,9 @@
     height: 20px;
 
     margin-top: 5px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
-
+ 
 .AddContact__button {
     background: white;
     border: 1px solid slategray;

@@ -7,7 +7,7 @@ const ContactList = ({ contacts }) => (
             <li
             key={contact.id}
             >
-            {contact.text}
+            {contact.text} 
             </li>
         ))}
     </ul>
