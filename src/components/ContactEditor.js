@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import PropTypes from 'prop-types'
 import styles from "./PhoneBook.module.css";
 
 class ContactEditor extends Component {
     state = {
-       nameText: '',
-       telNumber: '',
+       name: '',
+       number: '',
     };
 
     contactChange = e => {
@@ -23,9 +24,9 @@ class ContactEditor extends Component {
     formSubmit = e => {
         e.preventDefault();
     
-        this.props.onSubmit(this.state.nameText, this.state.telNumber);
+        this.props.onSubmit(this.state.name, this.state.number);
 
-        this.setState({nameText: '', telNumber: ''});
+        this.setState({name: '', number: ''});
     };
 
     render() {
@@ -35,13 +36,13 @@ class ContactEditor extends Component {
                 <label className={styles.AddContact__label}>
 
                     Name
-                    <textarea 
-                       value={this.state.nameText} 
+                    <input
+                       name="name"
+                       value={this.state.name} 
                        onChange={this.contactChange}  
                        className={styles.AddContact__data}
-                    >
-                    </textarea>
-
+                    />
+                    
                     Number
                     <input
                        type="tel"
@@ -49,8 +50,8 @@ class ContactEditor extends Component {
                        pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
                        title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
                        required
-                       value={this.state.telNumber} 
-                       onChange={this.numberChange} 
+                       value={this.state.number} 
+                       onChange={this.contactChange} 
                        className={styles.AddContact__data}
                     />
                 </label>
@@ -61,5 +62,6 @@ class ContactEditor extends Component {
         )
     };
 };
+
 
 export default ContactEditor;
