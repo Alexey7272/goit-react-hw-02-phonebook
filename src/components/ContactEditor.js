@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PropTypes from 'prop-types'
 import styles from "./PhoneBook.module.css";
 
 class ContactEditor extends Component {
